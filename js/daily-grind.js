@@ -37,7 +37,7 @@ console.log(queryString);
 //separate query string parameters
 const urlParams = new URLSearchParams(queryString);
 
-//today = 3;
+today = 3;
 
 if(urlParams.has("day")){//from querystring
   today = urlParams.get("day");}
