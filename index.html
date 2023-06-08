@@ -7,11 +7,12 @@
 	<!-- below is a google font, go to https://www.google.com/fonts to get yours! -->
 	<link href='https://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
 	<link id="mainStylesheet" rel="stylesheet" href="css/default.css" />
+	<link rel="stylesheet" href="css/nav.css">
     <style type="text/css">
 	
         html {background-color:#FF7518;/* pumpkin - overwrites default */}
         
-        .feature {color:#FF7518; /* daily feature color - pumpkin! */}
+        .feature {color:#07150b; /* daily feature color - pumpkin! */}
         
 		.masthead{
 			font-family: 'Holtwood One SC', serif; /* required for google font */
@@ -52,9 +53,11 @@
 	
 		<h1 class="masthead">The Daily Drip</h1>
 		<header><h3 class="slogan">Where Every cunp is perfect!</h3></header>
+		
+	
 		<nav>
 			<ul>
-				<li><a href="#">Menu</a></li>
+				<li class="a"><a href="#">Menu</a></li>
                 <li><a href="#">Rewards</a></li>
                 <li><a href="#">Locations</a></li>
                 <li><a href="#">About us</a></li>
@@ -62,19 +65,22 @@
 			</ul>
 		</nav>
 	</header>
+	<nav class="topnav" id="myTopnav">
+		<a href="index.html" class="active"> Daily Specials</a>
+		<a href="?day=0">Sunday</a>
+		<a href="?day=1">Monday</a>
+		<a href="?day=2">Tuesday</a>
+		<a href="?day=3">Wedensday</a>
+		<a href="?day=4">Thursay</a>
+		<a href="?day=5">Friday</a>
+		<a href="?day=6">Saturday</a> 
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>	
+	</nav>
     <main>
 
 		 <div id="coffee-cup"> Coffdee data goes here</div>
 
-        <h4> click below to view coffee specials for diffrent days </h4>
-		<div class=" container">
-		<p><a href="?day=0">Sunday</a></p>
-		<p><a href="?day=1">Monday</a></p>
-		<p><a href="?day=2">Tuesday</a></p>
-		<p><a href="?day=3">Wedensday</a></p>
-		<p><a href="?day=4">Thursay</a></p>
-		<p><a href="?day=5">Friday</a></p>
-		<p><a href="?day=6">Saturday</a></p> </div>
+        
 
 
     <!--
@@ -113,6 +119,14 @@
 		document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
 		
 		document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);  
+		function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }   
     </script>	
 </body>
 </html>
